@@ -21,3 +21,5 @@ chain = template | model | parser
 result = chain.invoke({"topic":"black hole"})
 
 print(result)
+
+# One of the main disadvantage of jsonoutput parser is that it can not give the output in a specific structured schema. 

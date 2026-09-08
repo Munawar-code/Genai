@@ -27,3 +27,5 @@ chain = template | model | parser
 result = model.invoke(prompt)
 
 print(result)
+
+You can only tell the structure in which you want the output but you can not do or perform data validation in case of structureoutput parsers.

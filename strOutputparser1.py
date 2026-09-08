@@ -5,8 +5,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-
 model = ChatAnthropic(model="claude-opus-4-8")
 
 template = PromptTemplate(
@@ -26,3 +24,5 @@ chain = template | model | parser | template2 | model | parser
 result = chain.invoke({"topic": "black hole"})
 
 print(result)
+
+# The main benefit of string output parser is that it is being used with chains as it is in this particular scenario because parse takes the string output from the model and pass it to template2 without parse we had to make two separate flows like in the case of strOutputparser.py file. 
